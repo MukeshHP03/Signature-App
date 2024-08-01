@@ -61,13 +61,13 @@ retrieveButton.addEventListener('click', () => {
         ctx.drawImage(img, 0, 0);
     }
     else{
-        alert("No Image Saved");
+        alert("No Signature Saved");
         // const message = document.createElement('p');
         // message.textContent = 'No Image Saved';
         // message.style.color = 'red';
         // errorMessage.appendChild(message);
-        // document.getElementById('error').innerHTML = 'No Image Found!'
+        document.getElementById('error').innerHTML = 'No Image Found!';
         // errorMessage.textContent = "Please enter a valid number"
-        //     errorMessage.style.color = "red"
+        errorMessage.style.color = "red";
     }
 })

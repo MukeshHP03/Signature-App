@@ -1,10 +1,11 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} */
 .main{
     /* margin: 30px; */
+    /* border: 1px solid black; */
     position:absolute;
     top: 50%;
     left: 50%;
@@ -33,5 +34,6 @@
     width: 80%;
 }
 .error{
-    
+    height: 1rem;
+/* background-color: red; */
 }
