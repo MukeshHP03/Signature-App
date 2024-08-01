@@ -62,8 +62,13 @@ retrieveButton.addEventListener('click', () => {
     }
     else{
         // alert("No Signature Saved");
+
         errorMessage.innerHTML = 'No Signature Saved!';
         errorMessage.style.color = "red";
+        setTimeout(() => {
+           errorMessage.innerHTML = "";
+        }, 3000);
+        
 
     }
 })
