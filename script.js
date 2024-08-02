@@ -2,10 +2,11 @@ const colorPicker = document.getElementById("color-picker");
 const canvasColor = document.getElementById("canvas-color");
 const canvas = document.getElementById("my-canvas");
 const clearButton = document.getElementById("clear-button");
-const saveButton = document.getElementById("save-button");
+const saveDownloadButton = document.getElementById("save-download-button");
 const fontPicker = document.getElementById("font-picker");
 const retrieveButton = document.getElementById('retrieve-button');
 const errorMessage = document.getElementById('error');
+const saveButton = document.getElementById('save-button');
 var isDrawing;
 var lastX;
 var lastY;
@@ -48,13 +49,16 @@ clearButton.addEventListener('click', () => {
 })
 saveButton.addEventListener('click', () => {
     localStorage.setItem('canvasContents', canvas.toDataURL());
+})
+saveDownloadButton.addEventListener('click', () => {
+    localStorage.setItem('canvasContents', canvas.toDataURL());
     let link = document.createElement('a');
     link.download = 'my-canvas.png';
     link.href = canvas.toDataURL();
     link.click();
 })
 retrieveButton.addEventListener('click', () => {
-    let savedCanvas = localStorage.getItem(canvasContents);
+    let savedCanvas = localStorage.getItem("canvasContents");
     if(savedCanvas){
         let img = new Image();
         img.src = savedCanvas;
